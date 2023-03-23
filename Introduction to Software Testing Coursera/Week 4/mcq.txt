@@ -1,0 +1,108 @@
+Question 1
+
+
+A static analysis technique overapproximates the reachable states of a program, to examine those states and determine if the program could ever reach an undesirable state.  Such an analysis is:
+
+optimistic
+i.e., the analysis may result in a "no"  answer for some programs that  exhibit undesirable behavior on some input.
+
+pessimistic [Correct]
+i.e., the analysis may result in a "yes" answer for some programs do not exhibit undesirable behavior on any input.
+
+precise
+i.e., the analysis result is always correct; the analysis will answer "yes" for exactly those programs that do not reach undesirable states on any input.
+
+
+Question 2
+
+
+The above is a representation of a Java compilation output showing an error in a piece of Java code.  In this instance, the error indicated is 
+
+
+The result of executing the code
+
+an indication of a real use-before-intialization fault
+
+an example of a false alarm  [Correct]
+
+the result of a static analysis [Correct]
+
+
+Question 3
+
+
+Examples of analyses that can be cast as dataflow analysis problems include:
+
+taint analysis [Correct]
+i.e., is there a potential for tainted input to be used at a particular statement where a sensitive operation is performed? 
+
+
+use-before-initialization [Correct]
+i.e., analysis to determine if there is a potential use of a variable before it is initialized
+
+
+assertion-violation-detection
+i.e., analysis to determine if an assertion violation can occur.
+
+
+Question 4
+
+
+Assert statements in a program capture expectation of what must be true when execution reaches a certain point in the program. Such expectations may capture:
+
+Post-condition [Correct]
+What is expected to be true after a part of a code is executed.
+
+Invariant [Correct]
+What is expected to be true every time some code is executed.
+
+Pre-condition [Correct]
+What is expected to be true before a part of a code is executed.
+
+
+
+Question 5
+
+
+"Simple checks on programs for naming conventions are not useful for detecting or preventing defects".  Provide one argument or reason to counter this statement.
+While naming conventions alone may not be enough to prevent all defects, they can help make code more readable and understandable for humans. By following consistent naming conventions, it can be easier for developers to quickly understand the purpose and functionality of different parts of the code. This can ultimately lead to faster development, easier maintenance, and fewer defects caused by confusion or misunderstanding of code. Additionally, certain naming conventions, such as using meaningful variable names or avoiding reserved keywords, can help prevent bugs caused by common mistakes or misunderstandings.
+Your answer cannot be more than 10000 characters.
+
+Ans : >  While naming conventions alone may not be enough to prevent all defects,
+ they can help make code more readable and understandable for humans. By following consistent naming conventions,
+ it can be easier for developers to quickly understand the purpose and functionality of different parts of the
+ code. This can ultimately lead to faster development, easier maintenance, and fewer defects caused by confusion
+ or misunderstanding of code. Additionally, certain naming conventions, such as using meaningful variable names
+ or avoiding reserved keywords, can help prevent bugs caused by common mistakes or misunderstandings.
+
+
+Question 6
+
+
+Program annotations are useful for providing information to tools that analyze the programs.  Such annotations
+
+
+Can be used only for static analysis
+i.e., the information cannot be made available at runtime
+
+
+Carry metainformation [Correct]
+i.e., provide information about program elements 
+
+
+May affect program behavior
+i.e., the semantics of the program may change
+
+
+Question 7
+
+
+Executing a program P on three different inputs 1, 10, and 100, we observe the respective outputs to be  0, 1 and 2. Which of the following can be inferred from this observation ?
+
+Suppose we conclude from the three observations that the property "output is less than input" holds true for this program. This could be a potential case of optimistic inaccuracy. [Correct]
+
+The program outputs the number of digits of the input that are zero.
+
+Any correct description of the behavior of the program should allow the pairs (1, 0), (10, 1) and (100, 2) for the value of (input, output). [Correct]
+
+The property "output is a non-zero integer" is not satisfied by this program. [Correct]
